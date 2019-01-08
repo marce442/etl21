@@ -1,0 +1,43 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "getTM",
+        "version": "1.0"
+    },
+    "host": "renewals.azure-api.net",
+    "basePath": "/gettm/rights",
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "apiKeyHeader": {
+            "type": "apiKey",
+            "name": "Ocp-Apim-Subscription-Key",
+            "in": "header"
+        },
+        "apiKeyQuery": {
+            "type": "apiKey",
+            "name": "subscription-key",
+            "in": "query"
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ],
+    "paths": {
+        "/rightsId": {
+            "get": {
+                "description": "retrieve a trademark",
+                "operationId": "tm",
+                "summary": "TM",
+                "responses": {}
+            }
+        }
+    },
+    "tags": []
+}

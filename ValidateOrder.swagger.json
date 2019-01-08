@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ValidateOrder",
+    "version": "1.0"
+  },
+  "host": "renewals.azure-api.net",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ],
+  "paths": {
+    "/orders/<Id>": {
+      "post": {
+        "operationId": "validateorder",
+        "summary": "validateOrder",
+        "responses": {}
+      }
+    }
+  },
+  "tags": []
+}      "basePath": {
+            "get": {
+                "description": "A list of trademarks.  Optional parameters work as filters to reduce the listed sessions.",
+                "operationId": "GetTM",
+                "summary": "GetTM",
+                "parameters": [{
+                    "name": "rightsId",
+                    "in": "query",
+                    "type": "string"
+                }, {
+                    "name": "dayno",
+                    "in": "query",
+                    "description": "Format - int32.",
+                    "type": "integer"
+                }, {
+                    "name": "keyword",
+                    "in": "query",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "produces": ["application/vnd.collection+json"]
+            }
+        },
+        "/session/{id}": {
+            "get": {
+                "description": "Retreive a representation of a single trademark by rightsIdId",
+                "operationId": "GetTM",
+                "summary": "GetTM",
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "description": "Format - int32.",
+                    "required": true,
+                    "type": "integer"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "produces": ["application/hal+json", "text/plain"]
+            }
+        },
+                "produces": ["application/vnd.collection+json"]
+            }
+        }
+    },
+    "definitions": {
+        "Body": {
+            "type": "string"
+        }
+    },
+    "tags": []
+}
